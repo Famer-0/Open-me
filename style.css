@@ -1,0 +1,79 @@
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #7dd3fc;
+  --text: #e6eef6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(125,211,252,0.06), transparent),
+              radial-gradient(800px 400px at 90% 90%, rgba(99,102,241,0.04), transparent),
+              var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Карточка */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(6px);
+  padding: 48px 56px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+  text-align: center;
+  max-width: 720px;
+  width: 100%;
+}
+
+/* Заголовок */
+h1 {
+  font-size: clamp(28px, 6vw, 56px);
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: var(--text);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Подзаголовок */
+p.sub {
+  margin-top: 6px;
+  color: rgba(230,238,246,0.7);
+  font-size: 16px;
+}
+
+/* Счётчик */
+#countdown {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+/* Анимация */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* Адаптив */
+@media (max-width: 480px) {
+  .card { padding: 28px 20px; border-radius: 14px; }
+  #countdown { font-size: 18px; }
+}
