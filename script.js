@@ -1,5 +1,5 @@
 // Целевая дата — 30 апреля 2026 года
-const targetDate = new Date("2026-01-01T00:00:00");
+const targetDate = new Date("2027-01-01T00:00:00");
 
 const mainText = document.getElementById("mainText");
 const countdown = document.getElementById("countdown");
